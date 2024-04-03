@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #10cbeb;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alabtaal.cafe.controller.ItemSaleController">
+   <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="694.0" prefWidth="493.0" style="-fx-border-color: #101111;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="304.0" AnchorPane.topAnchor="3.0">
+      <TableView fx:id="saleTable" layoutX="2.0" layoutY="4.0" prefHeight="349.0" prefWidth="345.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="155.0" text="Item Name" />
+            <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="discountColumn" prefWidth="75.0" text="Discount" />
+            <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="dateColumn" prefWidth="110.0" text="Sale Date" />
+         </columns>
+      </TableView>
+   </AnchorPane>
+   <AnchorPane layoutX="496.0" layoutY="4.0" prefHeight="694.0" prefWidth="298.0" style="-fx-border-color: #101111; -fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+      <Label fx:id="itemName" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="14.0" prefHeight="36.0" prefWidth="231.0" AnchorPane.bottomAnchor="645.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="190.0" prefWidth="190.0" style="-fx-border-color: #101111;" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <ImageView fx:id="itemImage" fitHeight="190.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <ChoiceBox fx:id="itemChooseChoiceBox" layoutX="50.0" layoutY="253.0" onAction="#onChoiceBox" prefHeight="33.0" prefWidth="201.0" style="-fx-border-color: #101111; -fx-background-color: white;" AnchorPane.bottomAnchor="407.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="253.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <Label layoutX="89.0" layoutY="295.0" prefHeight="23.0" prefWidth="64.0" text="Price:" textFill="#101111" AnchorPane.bottomAnchor="377.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="294.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="itemPrice" layoutX="159.0" layoutY="296.0" prefHeight="21.0" prefWidth="64.0" text="0.0" textFill="#101111" AnchorPane.bottomAnchor="378.0" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="295.0" />
+      <Spinner fx:id="spinner" layoutX="101.0" layoutY="325.0" prefHeight="25.0" prefWidth="112.0" style="-fx-border-color: #101111;" AnchorPane.bottomAnchor="347.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="325.0" />
+      <Label layoutX="65.0" layoutY="367.0" prefHeight="17.0" prefWidth="64.0" text="Discount:" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="discount" layoutX="149.0" layoutY="364.0" prefHeight="25.0" prefWidth="95.0" style="-fx-border-color: #101111;" AnchorPane.bottomAnchor="308.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="364.0" />
+      <Button layoutX="95.0" layoutY="402.0" mnemonicParsing="false" onAction="#onAddButtonPressed" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #101111;" text="ADD" textFill="#10cbeb" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="402.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="65.0" layoutY="450.0" prefHeight="17.0" prefWidth="64.0" text="Total Price:" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="totalPrice" layoutX="145.0" layoutY="450.0" prefHeight="17.0" prefWidth="64.0" text="0.0" textFill="#101111" />
+      <Label layoutX="31.0" layoutY="495.0" text="Receive Amount:" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="receiveAmount" layoutX="132.0" layoutY="491.0" prefHeight="25.0" prefWidth="130.0" promptText="0.0Rs" style="-fx-border-color: #101111;" />
+      <Label layoutX="76.0" layoutY="536.0" prefHeight="17.0" prefWidth="52.0" text="Change:" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="change" layoutX="145.0" layoutY="536.0" prefHeight="17.0" prefWidth="64.0" text="0.0" textFill="#101111" />
+      <Label layoutX="31.0" layoutY="570.0" text="Customer Name:" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="customerName" layoutX="132.0" layoutY="566.0" prefHeight="25.0" prefWidth="130.0" promptText="Enter Name" style="-fx-border-color: #101111;" />
+      <Button fx:id="payButton" layoutX="65.0" layoutY="607.0" mnemonicParsing="false" onAction="#onPayButtonPressed" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #101111;" text="PAY" textFill="#10cbeb" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="64.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="65.0" layoutY="648.0" mnemonicParsing="false" onAction="#onDeleteButtonPressed" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #101111;" text="Delete" textFill="#10cbeb" AnchorPane.leftAnchor="65.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="161.0" layoutY="648.0" mnemonicParsing="false" onAction="#onBillButtonPressed" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #101111;" text="Bill" textFill="#10cbeb" AnchorPane.rightAnchor="64.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </AnchorPane>
+</AnchorPane>

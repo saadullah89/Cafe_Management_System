@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #10cbeb; -fx-border-color: #101111;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alabtaal.cafe.controller.CustomerController">
+   <children>
+      <Label layoutX="337.0" layoutY="2.0" prefHeight="36.0" prefWidth="126.0" text="Customers" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerTable" layoutX="2.0" layoutY="42.0" prefHeight="310.0" prefWidth="798.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="41.0">
+        <columns>
+          <TableColumn fx:id="customerIDColumn" prefWidth="159.0" text="Customer ID" />
+            <TableColumn fx:id="totalQuantityColumn" prefWidth="112.0" text="Total Quantities" />
+          <TableColumn fx:id="totalPriceColumn" minWidth="0.0" prefWidth="106.0" text="Total Price" />
+            <TableColumn fx:id="dateColumn" minWidth="7.0" prefWidth="101.0" text="Date" />
+            <TableColumn fx:id="cashierColumn" minWidth="0.0" prefWidth="136.0" text="Cashier Name" />
+            <TableColumn fx:id="customerNameColumn" prefWidth="211.0" text="Customer Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="269.0" layoutY="351.0" prefHeight="36.0" prefWidth="263.0" text="All Items Sale History" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="saleTable" layoutX="2.0" prefHeight="310.0" prefWidth="798.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+        <columns>
+          <TableColumn fx:id="saleIdColumn" prefWidth="96.0" text="ID" />
+            <TableColumn fx:id="saleItemPriceColumn" prefWidth="112.0" text="Item Price" />
+            <TableColumn fx:id="saleItemQuantityColumn" prefWidth="125.0" text="Quantity" />
+            <TableColumn fx:id="saleItemDiscountColumn" prefWidth="137.0" text="Discount" />
+            <TableColumn fx:id="saleItemSaleDateColumn" prefWidth="119.0" text="Sale Date" />
+            <TableColumn fx:id="menuManagementIdColumn" prefWidth="206.0" text="Menu Management Item Id" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

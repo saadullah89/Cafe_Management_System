@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #101111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alabtaal.cafe.controller.LoginController">
+   <AnchorPane prefHeight="448.0" prefWidth="322.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+      <Separator layoutX="32.0" layoutY="55.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="18.0">
+         <effect>
+            <ColorAdjust brightness="-1.0" />
+         </effect>
+      </Separator>
+      <Label layoutX="50.0" layoutY="55.0" prefHeight="36.0" prefWidth="172.0" text="Login Account" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="147.0" text="Username" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="128.0" layoutY="143.0" promptText="Enter Username" style="-fx-border-color: #101111;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="38.0" layoutY="188.0" text="Password" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="128.0" layoutY="185.0" onKeyTyped="#onPasswordFieldChanged" promptText="Enter Password" style="-fx-border-color: #101111;" />
+      <TextField fx:id="planeTextField" layoutX="128.0" layoutY="185.0" onKeyTyped="#onPlanTextFieldChanged" promptText="Enter Password" style="-fx-border-color: #101111;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <CheckBox layoutX="128.0" layoutY="224.0" mnemonicParsing="false" onAction="#onCheckBoxClicked" text="Show Password" textFill="#101111">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="128.0" layoutY="268.0" mnemonicParsing="false" onAction="#onLoginButtonPressed" prefHeight="25.0" prefWidth="149.0" style="-fx-background-radius: 20; -fx-background-color: #10cbeb;" text="Login" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="128.0" layoutY="308.0" mnemonicParsing="false" onAction="#onForgotPasswordButtonPressed" prefHeight="25.0" prefWidth="149.0" style="-fx-background-radius: 20; -fx-background-color: #10cbeb;" text="Forgot Password" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="45.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClearButtonPressed" prefHeight="25.0" prefWidth="104.0" style="-fx-background-radius: 15; -fx-background-color: #10cbeb;" text="Clear" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="175.0" layoutY="392.0" mnemonicParsing="false" onAction="#onExitButtonPressed" prefHeight="25.0" prefWidth="104.0" style="-fx-background-radius: 15; -fx-background-color: #10cbeb;" text="Exit" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </AnchorPane>
+   <AnchorPane prefHeight="448.0" prefWidth="322.0" style="-fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="324.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+      <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="63.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="20.0">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="34.0" layoutY="269.0" text="Cafe Shop Management System" textFill="#101111" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="269.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="355.0" prefHeight="30.0" prefWidth="194.0" text="Create New Account" textFill="#101111">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="86.0" layoutY="392.0" mnemonicParsing="false" onAction="#onSignUpButtonPressed" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: #101111; -fx-background-color: #10cbeb;" text="Sign Up" textFill="#101111" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="86.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </AnchorPane>
+</AnchorPane>

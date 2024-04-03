@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alabtaal.cafe.controller.DashboardController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="6.0" prefHeight="164.0" prefWidth="794.0" style="-fx-background-color: #101111;" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+         <children>
+            <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="158.0" prefWidth="196.0" style="-fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="594.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <Label fx:id="customerNumber" layoutX="133.0" layoutY="9.0" prefHeight="17.0" prefWidth="56.0" text="00000" textFill="#101111" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="customerNumber1" layoutX="23.0" layoutY="127.0" prefHeight="21.0" prefWidth="151.0" text="Total Customers" textFill="#101111">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/users.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane layoutX="203.0" layoutY="3.0" prefHeight="158.0" prefWidth="196.0" style="-fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="3.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <Label fx:id="totalIncome" layoutX="115.0" layoutY="9.0" prefHeight="17.0" prefWidth="78.0" text="00000" textFill="#101111">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="totalIncome1" layoutX="49.0" layoutY="125.0" prefHeight="25.0" prefWidth="99.0" text="Total Income" textFill="#101111">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/moneyy.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane layoutX="402.0" layoutY="3.0" prefHeight="158.0" prefWidth="193.0" style="-fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="3.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <Label fx:id="totalSoldItem" layoutX="122.0" layoutY="9.0" prefHeight="17.0" prefWidth="65.0" text="00000" textFill="#101111">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="totalSoldItem1" layoutX="43.0" layoutY="127.0" prefHeight="21.0" prefWidth="123.0" text="Total Sold Items" textFill="#101111">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="17.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/shopping.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane layoutX="598.0" layoutY="3.0" prefHeight="158.0" prefWidth="193.0" style="-fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <Label fx:id="todayTotalIncome" layoutX="113.0" layoutY="9.0" prefHeight="17.0" prefWidth="78.0" text="00000" textFill="#101111">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="todayTotalIncome1" layoutX="40.0" layoutY="125.0" prefHeight="25.0" prefWidth="129.0" text="Today's Income" textFill="#101111">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="15.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/coin.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane layoutX="6.0" layoutY="159.0" prefHeight="537.0" prefWidth="794.0" style="-fx-background-color: #101111;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="170.0">
+         <children>
+            <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="529.0" prefWidth="390.0" style="-fx-border-color: #101111; -fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="394.0" AnchorPane.topAnchor="2.0">
+               <children>
+                  <AreaChart fx:id="areaChart" layoutX="5.0" layoutY="52.0" prefHeight="473.0" prefWidth="381.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+                  <Label layoutX="108.0" layoutY="20.0" prefHeight="36.0" prefWidth="179.0" text="Income's chart" textFill="#101111" AnchorPane.bottomAnchor="464.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="379.0" layoutY="5.0" prefHeight="529.0" prefWidth="391.0" style="-fx-border-color: #101111; -fx-background-color: #10cbeb;" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+               <children>
+                  <BarChart fx:id="barChart" layoutX="6.0" layoutY="53.0" prefHeight="473.0" prefWidth="381.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Label layoutX="94.0" layoutY="22.0" prefHeight="36.0" prefWidth="205.0" text="Customer's chart" textFill="#101111" AnchorPane.bottomAnchor="464.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
